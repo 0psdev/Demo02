@@ -55,8 +55,8 @@ resource "vsphere_virtual_machine" "vm" {
       windows_options {
         computer_name = var.VSPHERE_COMNAME
         join_domain = var.DOMAIN_AD
-        domain_admin_user = var.DOMAIN_ACC
-        domain_admin_password = var.DOAMIN_PASS
+        domain_admin_user = var.DOMAIN_USER
+        domain_admin_password = var.DOMAIN_PASS
       }
       network_interface {
         ipv4_address = var.VSPHERE_IP
