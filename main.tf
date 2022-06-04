@@ -39,6 +39,7 @@ resource "vsphere_virtual_machine" "vm" {
   memory           = var.VSPHERE_VRAM
   guest_id         = data.vsphere_virtual_machine.template.guest_id
   scsi_type        = data.vsphere_virtual_machine.template.scsi_type
+  firmware         = data.vsphere_virtual_machine.template.firmware
   network_interface {
     network_id   = data.vsphere_network.network.id
     adapter_type = data.vsphere_virtual_machine.template.network_interface_types[0]
