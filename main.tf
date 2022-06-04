@@ -36,7 +36,6 @@ resource "vsphere_virtual_machine" "vm" {
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
   datastore_id     = data.vsphere_datastore.datastore.id
   num_cpus         = var.VSPHERE_VCPU
-  num_cores_per_socket = var.VSPHER_CORE
   memory           = var.VSPHERE_VRAM
   guest_id         = data.vsphere_virtual_machine.template.guest_id
   scsi_type        = data.vsphere_virtual_machine.template.scsi_type
