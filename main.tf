@@ -36,6 +36,7 @@ resource "vsphere_virtual_machine" "vm" {
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
   datastore_id     = data.vsphere_datastore.datastore.id
   num_cpus         = var.VSPHERE_VCPU
+  num_cores_per_socket = var.VSPHER_CORE
   memory           = var.VSPHERE_VRAM
   guest_id         = data.vsphere_virtual_machine.template.guest_id
   scsi_type        = data.vsphere_virtual_machine.template.scsi_type
@@ -54,16 +55,16 @@ resource "vsphere_virtual_machine" "vm" {
     customize {
       windows_options {
         computer_name = var.VSPHERE_COMNAME
-        join_domain = var.DOMAIN_AD
+        join_domain = "home.local"
         domain_admin_user = var.DOMAIN_USER
         domain_admin_password = var.DOMAIN_PASS
       }
       network_interface {
-        ipv4_address = var.VSPHERE_IP
-        ipv4_netmask = var.VSPHERE_NETMASK
+        ipv4_address = "192.168.253.91"
+        ipv4_netmask = "24"
       }
-      ipv4_gateway = var.VSPHERE_GW
-      dns_server_list = var.DOMAIN_DNS
+      ipv4_gateway = "192.168.253.1"
+      dns_server_list = "192.168.253.10"
     }
   }
 }

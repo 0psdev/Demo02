@@ -38,10 +38,15 @@ variable "VSPHERE_TEMPLATE" {
 
 variable "VSPHERE_VMNAME" {
   type = string
-  default = "TEST5"
+  default = "TEST7"
 }
 
 variable "VSPHERE_VCPU" {
+  type = number
+  default = "2"
+}
+
+variable "VSPHERE_CORE" {
   type = number
   default = "2"
 }
@@ -53,12 +58,7 @@ variable "VSPHERE_VRAM" {
 
 variable "VSPHERE_COMNAME" {
   type = string
-  default = "TEST5"
-}
-
-variable "DOMAIN_AD" {
-  type = string
-  default = "home.local"
+  default = "TEST7"
 }
 
 variable "DOMAIN_USER" {
@@ -67,24 +67,4 @@ variable "DOMAIN_USER" {
 
 variable "DOMAIN_PASS" {
   type = string
-}
-
-variable "VSPHERE_IP" {
-  type = string
-  default = "192.168.253.100"
-}
-
-variable "VSPHERE_NETMASK" {
-  type = string
-  default = "24"
-}
-
-variable "VSPHERE_GW" {
-  type = string
-  default = "192.168.253.1"
-}
-
-variable "DOMAIN_DNS" {
-  type = list(string)
-  default = ["192.168.253.10"]
 }
