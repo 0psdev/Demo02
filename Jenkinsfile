@@ -10,6 +10,12 @@ pipeline {
   }
 
     stages {
+                stage('Echo') {
+            steps {
+                echo "${VC_USR}"
+                echo "${JD_USR}"
+            }
+        }
         stage('SCM') {
             steps {
                 git branch: 'main', url: 'https://github.com/0psdev/Demo02.git'
