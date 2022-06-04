@@ -4,6 +4,9 @@ pipeline {
         VC = credentials('VCACC')
         TF_VAR_VSPHERE_USER = "${VC_USR}"
         TF_VAR_VSPHERE_PASS = "${VC_PSW}"
+        JD = credentials('JDACC')
+        TF_VAR_DOMAIN_ACC = "${JD_USR}"
+        TF_VAR_DOMAIN_PASS = "${JD_PWS}"
   }
 
     stages {
