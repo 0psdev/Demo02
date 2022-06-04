@@ -85,6 +85,6 @@ variable "VSPHERE_GW" {
 }
 
 variable "DOMAIN_DNS" {
-  type = string
+  type = list(string)
   default = "192.168.253.10"
 }
