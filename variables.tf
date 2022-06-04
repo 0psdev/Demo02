@@ -38,12 +38,12 @@ variable "VSPHERE_TEMPLATE" {
 
 variable "VSPHERE_VMNAME" {
   type = string
-  default = "TEST3"
+  default = "TEST5"
 }
 
 variable "VSPHERE_VCPU" {
   type = number
-  default = "4"
+  default = "2"
 }
 
 variable "VSPHERE_VRAM" {
@@ -53,7 +53,7 @@ variable "VSPHERE_VRAM" {
 
 variable "VSPHERE_COMNAME" {
   type = string
-  default = "TEST3"
+  default = "TEST5"
 }
 
 variable "DOMAIN_AD" {
@@ -71,7 +71,7 @@ variable "DOMAIN_PASS" {
 
 variable "VSPHERE_IP" {
   type = string
-  default = "192.168.253.98"
+  default = "192.168.253.100"
 }
 
 variable "VSPHERE_NETMASK" {
