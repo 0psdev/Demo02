@@ -53,13 +53,16 @@ resource "vsphere_virtual_machine" "vm" {
     customize {
       windows_options {
         computer_name = var.VSPHERE_COMNAME
-        workgroup    = var.VSPHERE_WK
+        join_windomain = var.DOMAIN_AD
+        domain_domain_admin_user = var.DOMAIN_ACC
+        domain_admin_password = var.DOAMIN_PASS
       }
       network_interface {
         ipv4_address = var.VSPHERE_IP
         ipv4_netmask = var.VSPHERE_NETMASK
       }
       ipv4_gateway = var.VSPHERE_GW
+      dns_server_list = var.DOMAIN_DNS
     }
   }
 }

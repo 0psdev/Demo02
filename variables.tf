@@ -33,7 +33,7 @@ variable "VSPHERE_NETWORK" {
 
 variable "VSPHERE_TEMPLATE" {
   type = string
-  default = "W2K12"
+  default = "W16"
 }
 
 variable "VSPHERE_VMNAME" {
@@ -56,14 +56,23 @@ variable "VSPHERE_COMNAME" {
   default = "WIN"
 }
 
-variable "VSPHERE_WK" {
+variable "DOMAIN_AD" {
   type = string
-  default = "HOME"
+  default = "home.local"
+}
+
+
+variable "DOMAIN_ACC" {
+  type = string
+}
+
+variable "DOAMIN_PASS" {
+  type = string
 }
 
 variable "VSPHERE_IP" {
   type = string
-  default = "192.168.253.15"
+  default = "192.168.253.99"
 }
 
 variable "VSPHERE_NETMASK" {
@@ -72,6 +81,11 @@ variable "VSPHERE_NETMASK" {
 }
 
 variable "VSPHERE_GW" {
+  type = string
+  default = "192.168.253.1"
+}
+
+variable "DOMAIN_DNS" {
   type = string
   default = "192.168.253.1"
 }
