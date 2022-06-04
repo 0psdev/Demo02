@@ -66,7 +66,7 @@ variable "DOMAIN_ACC" {
   type = string
 }
 
-variable "DOAMIN_PASS" {
+variable "DOMAIN_PASS" {
   type = string
 }
 
