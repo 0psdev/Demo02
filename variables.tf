@@ -61,12 +61,11 @@ variable "DOMAIN_AD" {
   default = "home.local"
 }
 
-
-variable "DOMAIN_ACC" {
+variable "DOMAIN_USER" {
   type = string
 }
 
-variable "DOMAIN_PASS" {
+variable "DOAMIN_PASS" {
   type = string
 }
 
