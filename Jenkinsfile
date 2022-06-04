@@ -18,7 +18,7 @@ pipeline {
         }
         stage('SCM') {
             steps {
-                git branch: 'main', url: 'https://github.com/0psdev/Demo02.git'
+                git branch: 'main', url: 'https://github.com/0psdev/Demo02.git', credentials: "GHACC"
             }
         }
         stage('Initial') {
