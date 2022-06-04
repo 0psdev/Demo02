@@ -38,15 +38,10 @@ variable "VSPHERE_TEMPLATE" {
 
 variable "VSPHERE_VMNAME" {
   type = string
-  default = "TEST7"
+  default = "TEST"
 }
 
 variable "VSPHERE_VCPU" {
-  type = number
-  default = "2"
-}
-
-variable "VSPHERE_CORE" {
   type = number
   default = "2"
 }
@@ -58,7 +53,7 @@ variable "VSPHERE_VRAM" {
 
 variable "VSPHERE_COMNAME" {
   type = string
-  default = "TEST7"
+  default = "TEST"
 }
 
 variable "DOMAIN_USER" {
