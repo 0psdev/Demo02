@@ -38,7 +38,7 @@ variable "VSPHERE_TEMPLATE" {
 
 variable "VSPHERE_VMNAME" {
   type = string
-  default = "WIN"
+  default = "TEST"
 }
 
 variable "VSPHERE_VCPU" {
@@ -53,7 +53,7 @@ variable "VSPHERE_VRAM" {
 
 variable "VSPHERE_COMNAME" {
   type = string
-  default = "WIN"
+  default = "TEST"
 }
 
 variable "DOMAIN_AD" {
@@ -87,5 +87,5 @@ variable "VSPHERE_GW" {
 
 variable "DOMAIN_DNS" {
   type = string
-  default = "192.168.253.1"
+  default = "192.168.253.10"
 }
