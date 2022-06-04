@@ -53,8 +53,8 @@ resource "vsphere_virtual_machine" "vm" {
     customize {
       windows_options {
         computer_name = var.VSPHERE_COMNAME
-        join_windomain = var.DOMAIN_AD
-        domain_domain_admin_user = var.DOMAIN_ACC
+        join_domain = var.DOMAIN_AD
+        domain_admin_user = var.DOMAIN_ACC
         domain_admin_password = var.DOAMIN_PASS
       }
       network_interface {
