@@ -56,8 +56,8 @@ resource "vsphere_virtual_machine" "vm" {
         computer_name = var.VSPHERE_COMNAME
         time_zone = 205
         join_domain = "home.local"
-        domain_admin_user = "jdacc@home.local"
-        domain_admin_password = "g00dD@y"
+        domain_admin_user = var.VSPHERE_JDACC
+        domain_admin_password = var.VSPHERE_JDPASS
       }
       network_interface {
         ipv4_address = "192.168.253.91"
