@@ -38,7 +38,7 @@ variable "VSPHERE_TEMPLATE" {
 
 variable "VSPHERE_VMNAME" {
   type = string
-  default = "SERVER02"
+  default = "SERVER01"
 }
 
 variable "VSPHERE_VCPU" {
@@ -53,7 +53,7 @@ variable "VSPHERE_VRAM" {
 
 variable "VSPHERE_COMNAME" {
   type = string
-  default = "SERVER02"
+  default = "SERVER01"
 }
 
 variable "VSPHERE_JDACC" {
