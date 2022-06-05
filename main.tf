@@ -55,13 +55,16 @@ resource "vsphere_virtual_machine" "vm" {
       windows_options {
         computer_name = var.VSPHERE_COMNAME
         time_zone = 205
-        workgroup = "HOME"
+        join_domain = "home.local"
+        domain_admin_user = "jdacc@home.local"
+        domain_admin_password = "g00dD@y"
       }
       network_interface {
         ipv4_address = "192.168.253.91"
         ipv4_netmask = "24"
       }
       ipv4_gateway = "192.168.253.1"
+      dns_server_list = ["192.168.253.10"]
     }
   }
 }
