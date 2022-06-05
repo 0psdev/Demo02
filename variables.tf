@@ -56,10 +56,8 @@ variable "VSPHERE_COMNAME" {
   default = "TEST"
 }
 
-variable "VSPHERE_JDACC" {
-  type = string
-}
-
 variable "VSPHERE_JDPASS" {
   type = string
 }
+
+
