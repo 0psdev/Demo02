@@ -60,7 +60,7 @@ resource "vsphere_virtual_machine" "vm" {
         domain_admin_password = var.VSPHERE_JDPASS
       }
       network_interface {
-        ipv4_address = "192.168.253.91"
+        ipv4_address = "192.168.253.80"
         ipv4_netmask = "24"
       }
       ipv4_gateway = "192.168.253.1"
