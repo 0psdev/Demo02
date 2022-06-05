@@ -54,6 +54,7 @@ resource "vsphere_virtual_machine" "vm" {
     customize {
       windows_options {
         computer_name = var.VSPHERE_COMNAME
+        time_zone = 92
         workgroup = "HOME"
       }
       network_interface {
