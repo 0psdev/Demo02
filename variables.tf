@@ -56,10 +56,3 @@ variable "VSPHERE_COMNAME" {
   default = "TEST"
 }
 
-variable "DOMAIN_USER" {
-  type = string
-}
-
-variable "DOMAIN_PASS" {
-  type = string
-}

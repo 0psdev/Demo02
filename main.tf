@@ -54,16 +54,13 @@ resource "vsphere_virtual_machine" "vm" {
     customize {
       windows_options {
         computer_name = var.VSPHERE_COMNAME
-        join_domain = "home.local"
-        domain_admin_user = var.DOMAIN_USER
-        domain_admin_password = var.DOMAIN_PASS
+        workgroup = "HOME"
       }
       network_interface {
         ipv4_address = "192.168.253.91"
         ipv4_netmask = "24"
       }
       ipv4_gateway = "192.168.253.1"
-      dns_server_list = ["192.168.253.10"]
     }
   }
 }
